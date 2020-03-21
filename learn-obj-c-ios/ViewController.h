@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)btnTap:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *label1;
+
 
 @end
 

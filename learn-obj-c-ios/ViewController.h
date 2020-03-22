@@ -14,6 +14,12 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 
+@property (weak, nonatomic) IBOutlet UIButton *btn2Outlet;
+-(IBAction)btn2Action_TouchUpInside:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *btn3Outlet;
+- (IBAction)btn3Action_TouchUpInside:(id)sender;
 
 @end
 

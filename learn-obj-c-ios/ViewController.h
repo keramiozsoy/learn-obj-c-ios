@@ -10,16 +10,26 @@
 
 @interface ViewController : UIViewController
 
-- (IBAction)btnTap:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UILabel *label1;
+@property (weak, nonatomic) IBOutlet UILabel *labelOutlet;
 
-@property (weak, nonatomic) IBOutlet UIButton *btn2Outlet;
--(IBAction)btn2Action_TouchUpInside:(id)sender;
+// ----
 
 
-@property (weak, nonatomic) IBOutlet UIButton *btn3Outlet;
-- (IBAction)btn3Action_TouchUpInside:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldOutlet;
+
+- (IBAction)textField_EditingDidEnd:(id)sender;
+
+- (IBAction)textField_EditingDidBegin:(id)sender;
+
+- (IBAction)textField_EditingChanged:(id)sender;
+
+// ----
+
+@property (weak, nonatomic) IBOutlet UIButton *btnOutlet;
+
+- (IBAction)btn_TouchUpInside:(id)sender;
+
 
 @end
 

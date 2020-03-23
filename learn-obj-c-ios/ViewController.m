@@ -13,66 +13,83 @@
 @end
 
 @implementation ViewController
-@synthesize label1;
-@synthesize btn2Outlet;
-
+@synthesize textFieldOutlet;
+@synthesize btnOutlet;
+@synthesize labelOutlet;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSLog(@"Log - 3 - ViewController.m - viewDidLoad");
+    [btnOutlet setBackgroundColor:[UIColor redColor]];
     
-    NSLog(@"Log - btn2 renk degistikten sonra gosterildi");
-    
-    [btn2Outlet setTitleColor:[UIColor redColor] forState:UIControlStateNormal ];
+    [labelOutlet setTextColor:[UIColor whiteColor]];
     
     
+    // sayfa acildiginda otomatik olarak secili
+    //[textFieldOutlet becomeFirstResponder];
+    
+    // password klavyesi
+    //[textFieldOutlet setSecureTextEntry:YES];
+    
+    
+    // farklı klavye görünümleri
+    //[textFieldOutlet setKeyboardType:UIKeyboardTypeNumberPad];
+    
+    
+    //[textFieldOutlet setKeyboardType:UIKeyboardTypeEmailAddress];
+    
+    
+}
+- (IBAction)textField_EditingDidBegin:(id)sender {
+    
+    NSLog(@" Log - yazmaya basladi ");
     
 }
 
-
-- (IBAction)btnTap:(id)sender {
+- (IBAction)textField_EditingDidEnd:(id)sender {
     
-    NSLog(@" Log - Butona Basildi");
-    
-    // [_label1 setText:@"Butona Basildi"];
-    
-    /*
-     Tanımlamalar private
-     olduğundan
-     @synthesize tanımlaması
-     yapıldıktan sonra _
-     işareti kullanılmadan
-     erişim sağlanabilir.
-     */
-    [label1 setText:@"Butona Basildi"];
+    NSLog(@" Log - yazidan cikildi bitti ");
     
 }
 
-
-
-- (IBAction)btn2Action_TouchUpInside:(id)sender {
+- (IBAction)textField_EditingChanged:(id)sender {
     
-    // Butonu gizler
-    // [btn2Outlet setHidden:YES];
+    NSLog(@" Log - yazi degisiyor ");
     
-    // Butonu %50 oranında görünürlüğünü değiştirir
-    // [btn2Outlet setAlpha:0.5];
+    // yazi degistikce label de gösteriliyor
     
-    UIColor *yeniRenk = [[UIColor alloc] initWithRed:0 green:1 blue:0 alpha:0.5];
+    NSString *degisenyazi = [textFieldOutlet text];
     
-    UIColor *yeniRenk2 = [UIColor colorWithRed:0 green:1 blue:0 alpha:0.5];
-    
-    [btn2Outlet setBackgroundColor: yeniRenk2];
+    [labelOutlet setText:degisenyazi];
     
 }
-- (IBAction)btn3Action_TouchUpInside:(id)sender {
+
+- (IBAction)btn_TouchUpInside:(id)sender {
+    // focus yapılmış bir textfield
+    // dışına tıklanarak unfocus
+    // yapmak için tüm sayfayı bir buton
+    // ile kaplıyoruz ki
+    // kullanıcı boş bir yere basarak
+    // klavyeyi de kapatabilsin
     
-    // butonun yerini değiştiriyor
-    [_btn3Outlet setCenter:CGPointMake(250, 250)];
     
-    // butonun boyutunu değiştiriyor
-    //[_btn3Outlet setBounds:CGRectMake(300, 300, 30, 30)];
+    // buttonType = custom seçilir
+    
+    // buton tüm sayfayı kaplayacak şekilde
+    // genişletilir
+    
+    // view controller scene den içinde
+    // bulunduğu view in en alt katmanında
+    // olması için en yukarı taşınır.
+    
+    // uygulama baslarken rengi kirmizi
+    
+    NSLog(@" Log - Geri tusuna basildi ");
+    
+    
+    // Bu metot unfocus yapmayı sağlar
+    [textFieldOutlet resignFirstResponder];
+    
 }
 @end

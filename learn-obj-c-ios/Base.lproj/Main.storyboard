@@ -15,35 +15,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nKe-22-HNF">
-                                <rect key="frame" x="18" y="183" width="378" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0c-yn-HtW">
+                                <rect key="frame" x="20" y="471" width="166" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="sliderAction_ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vjY-US-Ret"/>
+                                    <action selector="butonStart_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hO8-B9-3aB"/>
                                 </connections>
-                            </slider>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmF-Dg-iEM">
-                                <rect key="frame" x="170" y="319" width="49" height="31"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6R-t7-10t">
+                                <rect key="frame" x="194" y="471" width="200" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="switchAction_ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qx2-lq-WYB"/>
+                                    <action selector="buttonStop_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1vR-mJ-X8d"/>
                                 </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-xU-y4J">
-                                <rect key="frame" x="118" y="99" width="167" height="50"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjD-Ox-M6n">
+                                <rect key="frame" x="20" y="592" width="166" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="butonStart_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCE-QQ-FxL"/>
+                                    <action selector="buttonStop_TouchUpInside_WithTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tsz-s9-yw8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="labelOutlet" destination="cNL-xU-y4J" id="w5D-3X-aSo"/>
-                        <outlet property="sliderOutlet" destination="nKe-22-HNF" id="tpf-9f-hh6"/>
-                        <outlet property="switchOutlet" destination="vmF-Dg-iEM" id="0HZ-o3-J5g"/>
+                        <outlet property="buttonStartOutlet" destination="S0c-yn-HtW" id="p7t-rm-c87"/>
+                        <outlet property="buttonStopOutlet" destination="H6R-t7-10t" id="qjI-B8-Rvd"/>
+                        <outlet property="buttonStopOutletWithTime" destination="RjD-Ox-M6n" id="Yio-3G-8Kc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

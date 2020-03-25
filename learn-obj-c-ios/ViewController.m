@@ -13,68 +13,62 @@
 @end
 
 @implementation ViewController
-@synthesize labelOutlet;
-@synthesize sliderOutlet;
-@synthesize switchOutlet;
+
+// tüm sınıfta kullanılacak
+ UIActivityIndicatorView *indicator;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [sliderOutlet setMinimumValue:100];
-    [sliderOutlet setMaximumValue:200];
-    
-    UIColor *sagTaraftakiRenk = [UIColor redColor];
-    
-    UIColor *solTaraftakiRenk = [UIColor greenColor];
 
-    [sliderOutlet setMaximumTrackTintColor: sagTaraftakiRenk];
     
-    [sliderOutlet setMinimumTrackTintColor: solTaraftakiRenk];
+    indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:     UIActivityIndicatorViewStyleLarge];
     
-    // sadece tuttum fakat biraktigim yerde
-    // degeri setlenmesi isteniyor ise bu
-    // parametre veriliyor
-    //[sliderOutlet setContinuous:YES];
-    [sliderOutlet setContinuous:NO];
+    // ekranda nerede olacagi
+    //indicator setCenter:CGPointMake(50, 50);
     
+    // self, bu sinif demektir. (this)
+    [indicator setCenter: self.view.center];
     
-    
-    // ---------------------------------------
+    // indicator u acilan sayfaya ekledik
+    [self.view addSubview:indicator];
     
     
+    // butonlarin isimleri
+    [_buttonStartOutlet setTitle:@"start"  forState:UIControlStateNormal];
     
-    // sayfa ilk acildiginda
-    // switch kapali gelsin
-    [switchOutlet setOn:NO];
+    [_buttonStopOutlet setTitle:@"stop"  forState:UIControlStateNormal];
+    
+    [_buttonStopOutletWithTime setTitle:@"2 saniyede dur"  forState:UIControlStateNormal];
+
+}
+
+- (IBAction)butonStart_TouchUpInside:(id)sender {
+    
+    // animasyon baslat
+    [indicator startAnimating];
     
     
-    // Renk kirmizi olmadi incele
-    [switchOutlet setTintColor:[UIColor redColor]];
+}
+- (IBAction)buttonStop_TouchUpInside:(id)sender {
+    
+    // animasyon durdur
+    [indicator stopAnimating];
     
 }
 
-- (IBAction)sliderAction_ValueChanged:(id)sender {
+- (IBAction)buttonStop_TouchUpInside_WithTime:(id)sender {
     
-    NSLog(@" %f ", [sliderOutlet value]);
+    // bastiktan 2 saniye sonra duracak
+    if ([indicator isAnimating]){
     
-    //NSString *degisenDeger = [NSString alloc] initWithFormat:@" %f ",[[sliderOutlet value] ]);
-    
-    NSString *degisenDeger = [[NSNumber alloc] initWithFloat:[sliderOutlet value]].stringValue;
-    
-    [labelOutlet setText: degisenDeger];
-    
-}
-- (IBAction)switchAction_ValueChanged:(id)sender {
-    
-    
-    if ([switchOutlet isOn]) {
-        NSLog(@"Log - Acik");
-    }else{
-        NSLog(@"Log - Kapali");
+    [self performSelector: @selector(kekekek) withObject:nil afterDelay:2.0];
+        
     }
-    
-    
-    
+}
+
+- (void)kekekek{
+    [indicator stopAnimating];
 }
 @end

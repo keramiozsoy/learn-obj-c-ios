@@ -13,83 +13,68 @@
 @end
 
 @implementation ViewController
-@synthesize textFieldOutlet;
-@synthesize btnOutlet;
 @synthesize labelOutlet;
+@synthesize sliderOutlet;
+@synthesize switchOutlet;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [btnOutlet setBackgroundColor:[UIColor redColor]];
+    [sliderOutlet setMinimumValue:100];
+    [sliderOutlet setMaximumValue:200];
     
-    [labelOutlet setTextColor:[UIColor whiteColor]];
+    UIColor *sagTaraftakiRenk = [UIColor redColor];
+    
+    UIColor *solTaraftakiRenk = [UIColor greenColor];
+
+    [sliderOutlet setMaximumTrackTintColor: sagTaraftakiRenk];
+    
+    [sliderOutlet setMinimumTrackTintColor: solTaraftakiRenk];
+    
+    // sadece tuttum fakat biraktigim yerde
+    // degeri setlenmesi isteniyor ise bu
+    // parametre veriliyor
+    //[sliderOutlet setContinuous:YES];
+    [sliderOutlet setContinuous:NO];
     
     
-    // sayfa acildiginda otomatik olarak secili
-    //[textFieldOutlet becomeFirstResponder];
     
-    // password klavyesi
-    //[textFieldOutlet setSecureTextEntry:YES];
+    // ---------------------------------------
     
     
-    // farklı klavye görünümleri
-    //[textFieldOutlet setKeyboardType:UIKeyboardTypeNumberPad];
+    
+    // sayfa ilk acildiginda
+    // switch kapali gelsin
+    [switchOutlet setOn:NO];
     
     
-    //[textFieldOutlet setKeyboardType:UIKeyboardTypeEmailAddress];
-    
-    
-}
-- (IBAction)textField_EditingDidBegin:(id)sender {
-    
-    NSLog(@" Log - yazmaya basladi ");
+    // Renk kirmizi olmadi incele
+    [switchOutlet setTintColor:[UIColor redColor]];
     
 }
 
-- (IBAction)textField_EditingDidEnd:(id)sender {
+- (IBAction)sliderAction_ValueChanged:(id)sender {
     
-    NSLog(@" Log - yazidan cikildi bitti ");
+    NSLog(@" %f ", [sliderOutlet value]);
     
-}
-
-- (IBAction)textField_EditingChanged:(id)sender {
+    //NSString *degisenDeger = [NSString alloc] initWithFormat:@" %f ",[[sliderOutlet value] ]);
     
-    NSLog(@" Log - yazi degisiyor ");
+    NSString *degisenDeger = [[NSNumber alloc] initWithFloat:[sliderOutlet value]].stringValue;
     
-    // yazi degistikce label de gösteriliyor
-    
-    NSString *degisenyazi = [textFieldOutlet text];
-    
-    [labelOutlet setText:degisenyazi];
+    [labelOutlet setText: degisenDeger];
     
 }
-
-- (IBAction)btn_TouchUpInside:(id)sender {
-    // focus yapılmış bir textfield
-    // dışına tıklanarak unfocus
-    // yapmak için tüm sayfayı bir buton
-    // ile kaplıyoruz ki
-    // kullanıcı boş bir yere basarak
-    // klavyeyi de kapatabilsin
+- (IBAction)switchAction_ValueChanged:(id)sender {
     
     
-    // buttonType = custom seçilir
-    
-    // buton tüm sayfayı kaplayacak şekilde
-    // genişletilir
-    
-    // view controller scene den içinde
-    // bulunduğu view in en alt katmanında
-    // olması için en yukarı taşınır.
-    
-    // uygulama baslarken rengi kirmizi
-    
-    NSLog(@" Log - Geri tusuna basildi ");
+    if ([switchOutlet isOn]) {
+        NSLog(@"Log - Acik");
+    }else{
+        NSLog(@"Log - Kapali");
+    }
     
     
-    // Bu metot unfocus yapmayı sağlar
-    [textFieldOutlet resignFirstResponder];
     
 }
 @end

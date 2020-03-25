@@ -15,26 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2b-jY-H80">
-                                <rect key="frame" x="0.0" y="82" width="414" height="307"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nKe-22-HNF">
+                                <rect key="frame" x="18" y="183" width="378" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="btn_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="608-u6-5G2"/>
+                                    <action selector="sliderAction_ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vjY-US-Ret"/>
                                 </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQY-il-SNo">
-                                <rect key="frame" x="81" y="156" width="253" height="34"/>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vmF-Dg-iEM">
+                                <rect key="frame" x="170" y="319" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="textField_EditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="IMZ-qQ-pjg"/>
-                                    <action selector="textField_EditingDidBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="SHz-4r-0V3"/>
-                                    <action selector="textField_EditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="1lY-3H-I7m"/>
+                                    <action selector="switchAction_ValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qx2-lq-WYB"/>
                                 </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-hv-NyO">
-                                <rect key="frame" x="135" y="115" width="158" height="21"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-xU-y4J">
+                                <rect key="frame" x="118" y="99" width="167" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -45,9 +41,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnOutlet" destination="L2b-jY-H80" id="DwX-2Q-9s5"/>
-                        <outlet property="labelOutlet" destination="RbV-hv-NyO" id="h0d-Ln-Ba2"/>
-                        <outlet property="textFieldOutlet" destination="oQY-il-SNo" id="wFD-kr-vmA"/>
+                        <outlet property="labelOutlet" destination="cNL-xU-y4J" id="w5D-3X-aSo"/>
+                        <outlet property="sliderOutlet" destination="nKe-22-HNF" id="tpf-9f-hh6"/>
+                        <outlet property="switchOutlet" destination="vmF-Dg-iEM" id="0HZ-o3-J5g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

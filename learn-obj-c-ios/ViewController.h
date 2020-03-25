@@ -10,26 +10,17 @@
 
 @interface ViewController : UIViewController
 
-
 @property (weak, nonatomic) IBOutlet UILabel *labelOutlet;
 
-// ----
+
+@property (weak, nonatomic) IBOutlet UISlider *sliderOutlet;
+
+- (IBAction)sliderAction_ValueChanged:(id)sender;
 
 
-@property (weak, nonatomic) IBOutlet UITextField *textFieldOutlet;
 
-- (IBAction)textField_EditingDidEnd:(id)sender;
-
-- (IBAction)textField_EditingDidBegin:(id)sender;
-
-- (IBAction)textField_EditingChanged:(id)sender;
-
-// ----
-
-@property (weak, nonatomic) IBOutlet UIButton *btnOutlet;
-
-- (IBAction)btn_TouchUpInside:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UISwitch *switchOutlet;
+- (IBAction)switchAction_ValueChanged:(id)sender;
 
 @end
 

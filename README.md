@@ -8,3 +8,5 @@ lesson 4 - textfield focus - changed value set label - keyboard open-close - bac
 lesson 5 - progress bar - switch - change color
 
 lesson 6 - activity indicator - start stop - stop with timer - how to add ui element programmatically
+
+lesson 7 - stepper - increment and decrement  value - how to add ui element programmatically

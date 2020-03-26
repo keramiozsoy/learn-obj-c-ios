@@ -14,41 +14,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0c-yn-HtW">
-                                <rect key="frame" x="20" y="471" width="166" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="butonStart_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hO8-B9-3aB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6R-t7-10t">
-                                <rect key="frame" x="194" y="471" width="200" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonStop_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1vR-mJ-X8d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjD-Ox-M6n">
-                                <rect key="frame" x="20" y="592" width="166" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="butonStart_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCE-QQ-FxL"/>
-                                    <action selector="buttonStop_TouchUpInside_WithTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tsz-s9-yw8"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="buttonStartOutlet" destination="S0c-yn-HtW" id="p7t-rm-c87"/>
-                        <outlet property="buttonStopOutlet" destination="H6R-t7-10t" id="qjI-B8-Rvd"/>
-                        <outlet property="buttonStopOutletWithTime" destination="RjD-Ox-M6n" id="Yio-3G-8Kc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

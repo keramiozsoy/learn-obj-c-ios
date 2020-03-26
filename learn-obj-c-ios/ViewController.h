@@ -10,15 +10,5 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonStartOutlet;
-- (IBAction)butonStart_TouchUpInside:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *buttonStopOutlet;
-- (IBAction)buttonStop_TouchUpInside:(id)sender;
-
-
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonStopOutletWithTime;
-- (IBAction)buttonStop_TouchUpInside_WithTime:(id)sender;
-
 @end
 

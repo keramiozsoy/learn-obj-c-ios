@@ -14,61 +14,71 @@
 
 @implementation ViewController
 
-// tüm sınıfta kullanılacak
- UIActivityIndicatorView *indicator;
-
+UILabel *labelOutlet;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    
-    indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:     UIActivityIndicatorViewStyleLarge];
-    
-    // ekranda nerede olacagi
-    //indicator setCenter:CGPointMake(50, 50);
-    
-    // self, bu sinif demektir. (this)
-    [indicator setCenter: self.view.center];
-    
-    // indicator u acilan sayfaya ekledik
-    [self.view addSubview:indicator];
     
     
-    // butonlarin isimleri
-    [_buttonStartOutlet setTitle:@"start"  forState:UIControlStateNormal];
+    CGRect frameForLabelOutlet = CGRectMake(100, 100, 200, 50 );
     
-    [_buttonStopOutlet setTitle:@"stop"  forState:UIControlStateNormal];
+    labelOutlet = [[UILabel alloc] initWithFrame:frameForLabelOutlet];
     
-    [_buttonStopOutletWithTime setTitle:@"2 saniyede dur"  forState:UIControlStateNormal];
-
+    [labelOutlet setText:@"+ veya -"];
+    
+    // ViewController view objesine label eklenir
+    [self.view addSubview:labelOutlet];
+    
+    // ------------
+    
+    
+    CGRect frame1 = CGRectMake(150, 150, 200, 50 );
+    
+    // bulunacagi yeri belirterek olusturduk
+    UIStepper *stepper1 = [[UIStepper alloc] initWithFrame:frame1];
+    
+    [stepper1 setMinimumValue:0];
+    [stepper1 setMaximumValue:100];
+    // kacar kacar artacagi
+    [stepper1 setStepValue:5];
+    // ekran acildiginda varsayilan degeri
+    [stepper1 setValue:50];
+    
+    //  ViewController view objesine stepper eklenir
+    [self.view addSubview:stepper1];
+    
+    
+    // stepper da hangi value change yapildiginda
+    // yapilacak islemi bir metot cagrisina
+    // addTarget metot yardımıyla bagliyoruz
+    // UIControlEventValueChanged enum
+    // ekrana elimizle ekledikten sonra
+    // ctrl tusuna basarak
+    // ViewController.h dosyasina surukleyip
+    // action secitiğimizdeki action
+    // olaynının programsal sekilde
+    // yapılmasidir. :)
+    
+    [stepper1 addTarget:self action:@selector(degerDegisti:) forControlEvents:UIControlEventValueChanged];
+    
+    
 }
 
-- (IBAction)butonStart_TouchUpInside:(id)sender {
+
+- (IBAction)degerDegisti:(id)sender{
     
-    // animasyon baslat
-    [indicator startAnimating];
+    // sender ile  gönderilen deger
+    // cast islemi yapliyor
+    UIStepper *s = (UIStepper*) sender;
     
+    NSNumber *seciliDeger = [[NSNumber alloc]initWithDouble:s.value];
     
-}
-- (IBAction)buttonStop_TouchUpInside:(id)sender {
+    NSLog(@"%@", seciliDeger.stringValue);
+ 
     
-    // animasyon durdur
-    [indicator stopAnimating];
-    
+    // secili degeri label a yazdiriyoruz
+    [labelOutlet setText:seciliDeger.stringValue];
 }
 
-- (IBAction)buttonStop_TouchUpInside_WithTime:(id)sender {
-    
-    // bastiktan 2 saniye sonra duracak
-    if ([indicator isAnimating]){
-    
-    [self performSelector: @selector(kekekek) withObject:nil afterDelay:2.0];
-        
-    }
-}
-
-- (void)kekekek{
-    [indicator stopAnimating];
-}
 @end

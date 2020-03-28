@@ -14,71 +14,79 @@
 
 @implementation ViewController
 
-UILabel *labelOutlet;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     
-    CGRect frameForLabelOutlet = CGRectMake(100, 100, 200, 50 );
+    CGRect cerceve = CGRectMake(100, 100, 200, 400);
     
-    labelOutlet = [[UILabel alloc] initWithFrame:frameForLabelOutlet];
+    UIImageView *imgView =[[UIImageView alloc] initWithFrame:cerceve];
     
-    [labelOutlet setText:@"+ veya -"];
+    // apple urunleri genelde png formati ile calisir
     
-    // ViewController view objesine label eklenir
-    [self.view addSubview:labelOutlet];
+    // resim dogrudan klasöre eklenerek
+    // calismiyor
+    // resim eklemek icin xcode daki
+    // projeni üzerine
+    // resim sürüklenip birakilir
+    // acilan ekrandan yes e tiklanir
     
-    // ------------
+    [imgView setImage: [UIImage imageNamed:@"tahta_resmi.png"]];
     
-    
-    CGRect frame1 = CGRectMake(150, 150, 200, 50 );
-    
-    // bulunacagi yeri belirterek olusturduk
-    UIStepper *stepper1 = [[UIStepper alloc] initWithFrame:frame1];
-    
-    [stepper1 setMinimumValue:0];
-    [stepper1 setMaximumValue:100];
-    // kacar kacar artacagi
-    [stepper1 setStepValue:5];
-    // ekran acildiginda varsayilan degeri
-    [stepper1 setValue:50];
-    
-    //  ViewController view objesine stepper eklenir
-    [self.view addSubview:stepper1];
+    [self.view addSubview:imgView];
     
     
-    // stepper da hangi value change yapildiginda
-    // yapilacak islemi bir metot cagrisina
-    // addTarget metot yardımıyla bagliyoruz
-    // UIControlEventValueChanged enum
-    // ekrana elimizle ekledikten sonra
-    // ctrl tusuna basarak
-    // ViewController.h dosyasina surukleyip
-    // action secitiğimizdeki action
-    // olaynının programsal sekilde
-    // yapılmasidir. :)
-    
-    [stepper1 addTarget:self action:@selector(degerDegisti:) forControlEvents:UIControlEventValueChanged];
+    // Gercekten resim bozulmadan
+    // gosterilmesi icin
+    // UIViewContentModeScaleAspectFit
+    // mod secilir
+    [imgView setContentMode:UIViewContentModeScaleAspectFit];
     
     
-}
+    
+    
+    // ---------
+    
+    
+    // dot syntax
+    // box syntax
+    // nedir ?
+    
+    
+    // self.view
+    // [self view]
+    
+    // yukaridaki yazıimlar ayni
+    // koseli parantezler ic ice
+    // zor okundugundan
+    // . ile kullanıldıgında
+    // paranteze gerek kalmiyor
+    // tek sebebi budur :)
 
-
-- (IBAction)degerDegisti:(id)sender{
     
-    // sender ile  gönderilen deger
-    // cast islemi yapliyor
-    UIStepper *s = (UIStepper*) sender;
+    // box syntax
+    // koseli ve : ile kullanilir.
+    // set
+    // get attribute vardir.
     
-    NSNumber *seciliDeger = [[NSNumber alloc]initWithDouble:s.value];
+    // dot syntax
+    // . ve = ile kullanilir.
+    // set yoktur dogrudan yazilir
+    // get attribute vardir
     
-    NSLog(@"%@", seciliDeger.stringValue);
- 
+    // [imgView setContentMode:UIViewContentModeScaleAspectFit];
     
-    // secili degeri label a yazdiriyoruz
-    [labelOutlet setText:seciliDeger.stringValue];
+     // imgView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 @end

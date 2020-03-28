@@ -16,6 +16,7 @@
 		CB92C6B02423F6D800F83401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6AF2423F6D800F83401 /* main.m */; };
 		CB92C6BA2423F6D800F83401 /* learn_obj_c_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6B92423F6D800F83401 /* learn_obj_c_iosTests.m */; };
 		CB92C6C52423F6D900F83401 /* learn_obj_c_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */; };
+		CBE11BED242F949300D88A99 /* tahta_resmi.png in Resources */ = {isa = PBXBuildFile; fileRef = CBE11BEC242F949300D88A99 /* tahta_resmi.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		CB92C6C02423F6D900F83401 /* learn-obj-c-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "learn-obj-c-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learn_obj_c_iosUITests.m; sourceTree = "<group>"; };
 		CB92C6C62423F6D900F83401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBE11BEC242F949300D88A99 /* tahta_resmi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tahta_resmi.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		CB92C69C2423F6D700F83401 /* learn-obj-c-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CBE11BEC242F949300D88A99 /* tahta_resmi.png */,
 				CB92C69D2423F6D700F83401 /* AppDelegate.h */,
 				CB92C69E2423F6D700F83401 /* AppDelegate.m */,
 				CB92C6A02423F6D700F83401 /* SceneDelegate.h */,
@@ -243,6 +246,7 @@
 				CB92C6AD2423F6D800F83401 /* LaunchScreen.storyboard in Resources */,
 				CB92C6AA2423F6D800F83401 /* Assets.xcassets in Resources */,
 				CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */,
+				CBE11BED242F949300D88A99 /* tahta_resmi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

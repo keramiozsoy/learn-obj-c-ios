@@ -12,3 +12,5 @@ lesson 6 - activity indicator - start stop - stop with timer - how to add ui ele
 lesson 7 - stepper - increment and decrement  value - how to add ui element programmatically
 
 lesson 8 - imageview - dot syntax or box syntax 
+
+lesson 9 - textview for multiple line text - scrollaable - editable

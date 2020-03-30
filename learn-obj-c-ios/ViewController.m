@@ -19,31 +19,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // Depracated ios 9
+      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@" Sayfa Basligi " message:@" Bu mesaj yazildi " delegate:self cancelButtonTitle:@" Cikis Yap " otherButtonTitles:@"deneme btn", nil];
+      [alertView show]; // ekranda gösterilmesini sagliyor.
+      
+      
+}
+
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
+    // <UIApplicationDelegate> viewController.h a eklendikten sonra
+    // bu metot alertView şeklinde yazıldıgında
+    // otomatik çıkıyor
     
-    
-    CGRect cerceve = CGRectMake(100, 100, 200, 150);
-    
-    UITextView *textView =[[UITextView alloc] initWithFrame:cerceve];
-    
-    
-    NSString *cokSatirliYazi = @"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum";
-    
-    
-    [textView setText:cokSatirliYazi];
-    
-    [self.view addSubview:textView];
-    
-    
-    // ekrana geldikten sonra
-    // degistirilebilir olsun
-    [textView setEditable:YES];
-    
-    // kaydirmali olsun
-    [textView setScrollEnabled:YES];
-    
-    
-    
+    NSLog( @" %d tag li alert View", buttonIndex );
     
 }
 

@@ -14,3 +14,5 @@ lesson 7 - stepper - increment and decrement  value - how to add ui element prog
 lesson 8 - imageview - dot syntax or box syntax 
 
 lesson 9 - textview for multiple line text - scrollaable - editable
+
+lesson 10 - alert view

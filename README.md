@@ -15,4 +15,4 @@ lesson 8 - imageview - dot syntax or box syntax
 
 lesson 9 - textview for multiple line text - scrollaable - editable
 
-lesson 10 - alert view
+lesson 10 - alert view - delegate

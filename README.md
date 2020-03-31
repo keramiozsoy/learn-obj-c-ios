@@ -2,6 +2,7 @@
 
 every branch has different project
 
+lesson 1 - button press and change text of label 
 
 lesson 4 - textfield focus - changed value set label - keyboard open-close - back button
 

@@ -6,6 +6,8 @@ lesson 1 - button press and change text of label
 
 lesson 2 - synthesize - nslog
 
+lesson 3 - button change location - size - background color
+
 lesson 4 - textfield focus - changed value set label - keyboard open-close - back button
 
 lesson 5 - progress bar - switch - change color

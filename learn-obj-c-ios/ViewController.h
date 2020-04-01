@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+// kullanilmak istenilen
+// siniflar h
+// dosyasina
+// import edilir
+#import "Kisi.h"
+#import "Ogrenci.h"
+
 @interface ViewController : UIViewController
-- (IBAction)datePickerAction_ValueChanged:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UITextView *textViewOutlet;
-
 
 @end
 

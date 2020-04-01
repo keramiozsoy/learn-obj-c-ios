@@ -8,17 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController < UIPickerViewDataSource ,  UIPickerViewDelegate>
+@interface ViewController : UIViewController
+- (IBAction)datePickerAction_ValueChanged:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerViewOutlet;
+@property (weak, nonatomic) IBOutlet UITextView *textViewOutlet;
 
-
-@property NSMutableArray *dizi;
-@property NSMutableArray *dizi2;
-
-@property (weak, nonatomic) IBOutlet UIButton *buttonOutlet;
-- (IBAction)buttonAction_TouchUpInside:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *labelOutlet;
 
 @end
 

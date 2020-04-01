@@ -25,3 +25,5 @@ lesson 10 - alert view - delegate
 lesson 11 - picker view (combobox)
 
 lesson 12 - date picker - formatter - changed value
+
+lesson 13 - oop - new class - constructor - public - private - self - dealloc - static - void - multiple param method

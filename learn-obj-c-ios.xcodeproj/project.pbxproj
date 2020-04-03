@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB43E4532434ED1800E018F5 /* Kisi.m in Sources */ = {isa = PBXBuildFile; fileRef = CB43E4522434ED1800E018F5 /* Kisi.m */; };
-		CB43E4562434ED4A00E018F5 /* Ogrenci.m in Sources */ = {isa = PBXBuildFile; fileRef = CB43E4552434ED4A00E018F5 /* Ogrenci.m */; };
 		CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C69E2423F6D700F83401 /* AppDelegate.m */; };
 		CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6A12423F6D700F83401 /* SceneDelegate.m */; };
-		CB92C6A52423F6D700F83401 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6A42423F6D700F83401 /* ViewController.m */; };
 		CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92C6A62423F6D700F83401 /* Main.storyboard */; };
 		CB92C6AA2423F6D800F83401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB92C6A92423F6D800F83401 /* Assets.xcassets */; };
 		CB92C6AD2423F6D800F83401 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92C6AB2423F6D800F83401 /* LaunchScreen.storyboard */; };
 		CB92C6B02423F6D800F83401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6AF2423F6D800F83401 /* main.m */; };
 		CB92C6BA2423F6D800F83401 /* learn_obj_c_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6B92423F6D800F83401 /* learn_obj_c_iosTests.m */; };
 		CB92C6C52423F6D900F83401 /* learn_obj_c_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */; };
+		CBE62E792437D9EA00F44638 /* MyFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE62E782437D9EA00F44638 /* MyFirstViewController.m */; };
+		CBE62E7C2437DA0200F44638 /* MySecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE62E7B2437DA0200F44638 /* MySecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,17 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB43E4512434ED1800E018F5 /* Kisi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kisi.h; sourceTree = "<group>"; };
-		CB43E4522434ED1800E018F5 /* Kisi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kisi.m; sourceTree = "<group>"; };
-		CB43E4542434ED4A00E018F5 /* Ogrenci.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ogrenci.h; sourceTree = "<group>"; };
-		CB43E4552434ED4A00E018F5 /* Ogrenci.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ogrenci.m; sourceTree = "<group>"; };
 		CB92C69A2423F6D700F83401 /* learn-obj-c-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learn-obj-c-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C69D2423F6D700F83401 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB92C69E2423F6D700F83401 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CB92C6A02423F6D700F83401 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		CB92C6A12423F6D700F83401 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		CB92C6A32423F6D700F83401 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CB92C6A42423F6D700F83401 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CB92C6A72423F6D700F83401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB92C6A92423F6D800F83401 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB92C6AC2423F6D800F83401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +53,10 @@
 		CB92C6C02423F6D900F83401 /* learn-obj-c-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "learn-obj-c-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learn_obj_c_iosUITests.m; sourceTree = "<group>"; };
 		CB92C6C62423F6D900F83401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBE62E772437D9EA00F44638 /* MyFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFirstViewController.h; sourceTree = "<group>"; };
+		CBE62E782437D9EA00F44638 /* MyFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFirstViewController.m; sourceTree = "<group>"; };
+		CBE62E7A2437DA0200F44638 /* MySecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySecondViewController.h; sourceTree = "<group>"; };
+		CBE62E7B2437DA0200F44638 /* MySecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,17 +111,15 @@
 				CB92C69E2423F6D700F83401 /* AppDelegate.m */,
 				CB92C6A02423F6D700F83401 /* SceneDelegate.h */,
 				CB92C6A12423F6D700F83401 /* SceneDelegate.m */,
-				CB92C6A32423F6D700F83401 /* ViewController.h */,
-				CB92C6A42423F6D700F83401 /* ViewController.m */,
 				CB92C6A62423F6D700F83401 /* Main.storyboard */,
+				CBE62E772437D9EA00F44638 /* MyFirstViewController.h */,
+				CBE62E782437D9EA00F44638 /* MyFirstViewController.m */,
+				CBE62E7A2437DA0200F44638 /* MySecondViewController.h */,
+				CBE62E7B2437DA0200F44638 /* MySecondViewController.m */,
 				CB92C6A92423F6D800F83401 /* Assets.xcassets */,
 				CB92C6AB2423F6D800F83401 /* LaunchScreen.storyboard */,
 				CB92C6AE2423F6D800F83401 /* Info.plist */,
 				CB92C6AF2423F6D800F83401 /* main.m */,
-				CB43E4512434ED1800E018F5 /* Kisi.h */,
-				CB43E4522434ED1800E018F5 /* Kisi.m */,
-				CB43E4542434ED4A00E018F5 /* Ogrenci.h */,
-				CB43E4552434ED4A00E018F5 /* Ogrenci.m */,
 			);
 			path = "learn-obj-c-ios";
 			sourceTree = "<group>";
@@ -277,12 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB43E4532434ED1800E018F5 /* Kisi.m in Sources */,
-				CB92C6A52423F6D700F83401 /* ViewController.m in Sources */,
 				CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */,
 				CB92C6B02423F6D800F83401 /* main.m in Sources */,
+				CBE62E7C2437DA0200F44638 /* MySecondViewController.m in Sources */,
 				CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */,
-				CB43E4562434ED4A00E018F5 /* Ogrenci.m in Sources */,
+				CBE62E792437D9EA00F44638 /* MyFirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

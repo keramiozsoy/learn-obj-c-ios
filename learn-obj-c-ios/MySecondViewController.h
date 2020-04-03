@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MySecondViewController : UIViewController
 
+@property NSString *str1;
+@property (weak, nonatomic) IBOutlet UILabel *labelOutlet;
+
 @end
 
 NS_ASSUME_NONNULL_END

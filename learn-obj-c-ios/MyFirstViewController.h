@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MySecondViewController.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyFirstViewController : UIViewController

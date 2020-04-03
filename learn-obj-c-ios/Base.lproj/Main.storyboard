@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lfk-lV-Mt5">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My First View Controller-->
         <scene sceneID="sU0-Ll-Rwy">
             <objects>
-                <viewController id="Lfk-lV-Mt5" sceneMemberID="viewController">
+                <viewController id="Lfk-lV-Mt5" customClass="MyFirstViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="scm-tT-HUq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,6 +19,9 @@
                                 <rect key="frame" x="58" y="164" width="239" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="5a6-tc-Y8f" kind="modal" id="6v1-px-d9g"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -29,20 +32,33 @@
             </objects>
             <point key="canvasLocation" x="-872.46376811594212" y="-176.11607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--My Second View Controller-->
         <scene sceneID="3gX-SV-bx3">
             <objects>
-                <viewController id="5a6-tc-Y8f" sceneMemberID="viewController">
+                <viewController id="5a6-tc-Y8f" customClass="MySecondViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pbI-qf-i7r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYX-NB-C9i">
+                                <rect key="frame" x="120" y="196" width="156" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dPI-ga-mqq"/>
                     </view>
+                    <navigationItem key="navigationItem" id="m3O-TY-bTl"/>
+                    <connections>
+                        <outlet property="labelOutlet" destination="eYX-NB-C9i" id="E9F-ZJ-Wl4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhT-5A-qR6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="-167"/>
+            <point key="canvasLocation" x="340.57971014492756" y="-176.11607142857142"/>
         </scene>
     </scenes>
 </document>

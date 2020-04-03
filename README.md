@@ -27,3 +27,5 @@ lesson 11 - picker view (combobox)
 lesson 12 - date picker - formatter - changed value
 
 lesson 13 - oop - new class - constructor - public - private - self - dealloc - static - void - multiple param method
+
+lesson 14 - view controller navigate with data to other view controller

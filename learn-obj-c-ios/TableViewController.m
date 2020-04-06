@@ -51,12 +51,27 @@
     
     
     
-    arr1 = @[@" AAA ",
-            @" BBB ",
-            @" CCC ",
-            @" DDD ",
-            @" EEE "];
+    NSArray *dizi1 = @[
+            @" 111 ",
+            @" 222 ",
+            @" 333 ",
+            @" 444 ",
+            @" 555 "
+    ];
     
+    
+    
+    NSArray *dizi2 = @[
+            @" 0 ",
+            @" 00 ",
+            @" 000 ",
+            @" 0000 ",
+            @" 00000 ",
+            @" 000000 ",
+            @" 000000 "
+    ];
+    
+    arr1 = @[dizi1,dizi2];
     
     
     
@@ -76,7 +91,7 @@
 #warning Incomplete implementation, return the number of sections
     
     
-    return 1; // biz bi tane section yapiyoruz.
+    return [arr1 count]; // biz bi tane section yapiyoruz.
     
     
 }
@@ -87,8 +102,14 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
     
-    
-    return [arr1 count];
+    // gelen dizinin section
+    // kelimesi
+    // ile index
+    // numarasini al
+    // ve o dizinin
+    // count u kadar row
+    // oldugunu soyle
+    return [[arr1 objectAtIndex:section] count];
     
     
     
@@ -112,7 +133,13 @@
     // Configure the cell...
     
     // her satiri dizi ile dolduruyoruz.
-    cell.textLabel.text = [arr1 objectAtIndex:indexPath.row];
+    //cell.textLabel.text = [arr1 objectAtIndex:indexPath.row];
+    
+    // her satiri dizi nin
+    // her index indeki
+    
+    cell.textLabel.text = [[arr1 objectAtIndex:indexPath.section]                           objectAtIndex:indexPath.row
+                           ];
     cell.detailTextLabel.text = @"hepsinin aciklamasi";
     
     // ui dan -> tableview
@@ -130,6 +157,27 @@
     
     
     return cell;
+}
+
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    // bu metot kullanilmayinca
+    // tum dizilerdekiler
+    // alt alta yaziyor
+    // bu nedenle
+    //
+    // tum dizilere
+    // isim verilerek
+    // ayristiriliyor
+    
+    
+    if (section == 0){ 
+        return @"isimler";
+    }else {
+        return @"sifirlar";
+    }
 }
 
 

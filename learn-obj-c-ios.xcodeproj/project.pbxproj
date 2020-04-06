@@ -15,8 +15,7 @@
 		CB92C6B02423F6D800F83401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6AF2423F6D800F83401 /* main.m */; };
 		CB92C6BA2423F6D800F83401 /* learn_obj_c_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6B92423F6D800F83401 /* learn_obj_c_iosTests.m */; };
 		CB92C6C52423F6D900F83401 /* learn_obj_c_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */; };
-		CBE62E792437D9EA00F44638 /* MyFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE62E782437D9EA00F44638 /* MyFirstViewController.m */; };
-		CBE62E7C2437DA0200F44638 /* MySecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE62E7B2437DA0200F44638 /* MySecondViewController.m */; };
+		CBFC9C14243BA5840053F140 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFC9C13243BA5840053F140 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +52,8 @@
 		CB92C6C02423F6D900F83401 /* learn-obj-c-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "learn-obj-c-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learn_obj_c_iosUITests.m; sourceTree = "<group>"; };
 		CB92C6C62423F6D900F83401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBE62E772437D9EA00F44638 /* MyFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFirstViewController.h; sourceTree = "<group>"; };
-		CBE62E782437D9EA00F44638 /* MyFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFirstViewController.m; sourceTree = "<group>"; };
-		CBE62E7A2437DA0200F44638 /* MySecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySecondViewController.h; sourceTree = "<group>"; };
-		CBE62E7B2437DA0200F44638 /* MySecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySecondViewController.m; sourceTree = "<group>"; };
+		CBFC9C12243BA5840053F140 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		CBFC9C13243BA5840053F140 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +109,8 @@
 				CB92C6A02423F6D700F83401 /* SceneDelegate.h */,
 				CB92C6A12423F6D700F83401 /* SceneDelegate.m */,
 				CB92C6A62423F6D700F83401 /* Main.storyboard */,
-				CBE62E772437D9EA00F44638 /* MyFirstViewController.h */,
-				CBE62E782437D9EA00F44638 /* MyFirstViewController.m */,
-				CBE62E7A2437DA0200F44638 /* MySecondViewController.h */,
-				CBE62E7B2437DA0200F44638 /* MySecondViewController.m */,
+				CBFC9C12243BA5840053F140 /* TableViewController.h */,
+				CBFC9C13243BA5840053F140 /* TableViewController.m */,
 				CB92C6A92423F6D800F83401 /* Assets.xcassets */,
 				CB92C6AB2423F6D800F83401 /* LaunchScreen.storyboard */,
 				CB92C6AE2423F6D800F83401 /* Info.plist */,
@@ -274,9 +269,8 @@
 			files = (
 				CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */,
 				CB92C6B02423F6D800F83401 /* main.m in Sources */,
-				CBE62E7C2437DA0200F44638 /* MySecondViewController.m in Sources */,
 				CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */,
-				CBE62E792437D9EA00F44638 /* MyFirstViewController.m in Sources */,
+				CBFC9C14243BA5840053F140 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 //
-//  TableViewController.h
+//  myTableViewController.h
 //  learn-obj-c-ios
 //
-//  Created by Mac on 6.04.2020.
+//  Created by Mac on 9.04.2020.
 //  Copyright © 2020 Mac. All rights reserved.
 //
 
@@ -10,11 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TableViewController : UITableViewController
+@interface myTableViewController : UITableViewController
 
 
-
-@property NSArray *arr1;
+@property NSMutableArray *dizi;
 
 
 @end

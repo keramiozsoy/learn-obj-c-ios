@@ -1,36 +1,38 @@
 //
-//  myTableViewController.m
+//  myCustomTableViewController.m
 //  learn-obj-c-ios
 //
-//  Created by Mac on 9.04.2020.
+//  Created by Mac on 11.04.2020.
 //  Copyright © 2020 Mac. All rights reserved.
 //
 
-#import "myTableViewController.h"
+#import "myCustomTableViewController.h"
 
-@interface myTableViewController ()
+@interface myCustomTableViewController ()
 
 @end
 
-@implementation myTableViewController
+@implementation myCustomTableViewController
 @synthesize dizi;
+@synthesize dizi2;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dizi = [NSMutableArray array];
+    dizi = @[@"bir",@"iki",@"uc"];
+    dizi2 = @[@"yellow.png",@"blue.png",@"red.png"];
     
-    [dizi addObject:@"111"];
-    [dizi addObject:@"222"];
-    [dizi addObject:@"333"];
     
-    UIRefreshControl *myRefresh = [[UIRefreshControl alloc] init];
     
-    // ekranda gostermek
-    self.refreshControl = myRefresh;
+    //for (int i=0; i<30; i++) {
+        
+    //    NSString *str = [[NSString alloc] initWithFormat:@"%d",i];
+        
+    //    [dizi addObject:str];
+        
+    //}
     
-    // yenileme calisinca cagirilacak metot
-    [myRefresh addTarget:self action:@selector( yenileVeElemanEkle ) forControlEvents:UIControlEventValueChanged];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -39,31 +41,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-
-- (void) yenileVeElemanEkle {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterNoStyle];
-    [formatter setTimeStyle:NSDateFormatterFullStyle];
-    NSString *sonuc = [formatter stringFromDate: [NSDate date]];
-    [dizi addObject: sonuc];
-    
-    // veri ekledikten sonra
-    // ui da veri gozukmesi icin
-    // son veriyi tekrar gondermeliyiz
-    [self.tableView reloadData];
-    
-    // yenilemeyi bitir
-    [self.refreshControl endRefreshing];
-    
-}
-
-
-// herhangi bir eleman secildiginde calisan metot
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSLog(@" %d section %d row",indexPath.section, indexPath.row);
-    
-}
+#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
@@ -77,16 +55,51 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-    
-    // indexPath
-    // satir veya sutuna erismek icindir.
-    
-    cell.textLabel.text = [dizi objectAtIndex:indexPath.row];
-    
-    return cell;
-}
 
+    NSString *reuseIdentifier = @"myCustomCell";
+    // burada yazdigimizi ui dan
+    // myCustomCell yazarak esitliyoruz.
+    //
+    // eski
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    //
+    //
+    // yeni
+    //
+    //
+    // #import "myCustomTableViewCell.h"
+    // bu sininfin header sinifinda
+    // import edilmistir
+    myCustomTableViewCell *myCustomCell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    // UITableViewCell tan tureyen bir sınıftan donus
+    // yapılması gerektigi metotun donus parametresinden
+    // anlasiliyor
+
+    
+    
+
+    // dizinin o satirindaki
+    // objeyi ui daki cell in text alanina
+    // deger olarak ver
+    //
+    // eski yontem
+    // cell.textLabel.text = [dizi objectAtIndex:indexPath.row];
+    //  return cell;
+    //
+    //
+    // yeni yontem
+    // dogru fakat calismiyor :) sdk eski oldugundan
+    //
+    //myCustomCell.myCustomLabelOutlet.text = [dizi objectAtIndex:indexPath.row];
+    //myCustomCell.myCustomImageViewOutlet.image  = [UIImage imageNamed: [dizi2 objectAtIndex:indexPath.row ]];
+    // otomatik olusturulan yonetim kullaniliyoruz
+    myCustomCell.textLabel.text = [dizi objectAtIndex:indexPath.row];
+    myCustomCell.imageView.image  = [UIImage imageNamed: [dizi2 objectAtIndex:indexPath.row ]];
+    
+    
+    return myCustomCell;
+}
 
 /*
 // Override to support conditional editing of the table view.

@@ -37,3 +37,5 @@ lesson 16 - Multiple array in one table list and splitted with section header
 lesson 17 - UIRefreshControl - refresh list and add new object 
 
 lesson 18 - UITableViewCell - Custom View with imageview and label and filled with png
+
+lesson 19 - segue - UITableViewController with Navigation Controller - fill array to list

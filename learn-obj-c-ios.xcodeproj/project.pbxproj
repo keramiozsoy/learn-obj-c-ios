@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB023E5E24425E6700E55344 /* myCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB023E5D24425E6700E55344 /* myCustomTableViewController.m */; };
-		CB81BB6C244268A0001D9E5E /* myCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81BB6B244268A0001D9E5E /* myCustomTableViewCell.m */; };
-		CB81BB75244276E2001D9E5E /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = CB81BB72244276E2001D9E5E /* yellow.png */; };
-		CB81BB76244276E2001D9E5E /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = CB81BB73244276E2001D9E5E /* blue.png */; };
-		CB81BB77244276E2001D9E5E /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = CB81BB74244276E2001D9E5E /* red.png */; };
+		CB2003BE24436603003D92A0 /* myCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2003BD24436603003D92A0 /* myCustomTableViewController.m */; };
+		CB2003C3244366C2003D92A0 /* Kisi.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2003C2244366C2003D92A0 /* Kisi.m */; };
 		CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C69E2423F6D700F83401 /* AppDelegate.m */; };
 		CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6A12423F6D700F83401 /* SceneDelegate.m */; };
 		CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92C6A62423F6D700F83401 /* Main.storyboard */; };
@@ -20,6 +17,7 @@
 		CB92C6B02423F6D800F83401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6AF2423F6D800F83401 /* main.m */; };
 		CB92C6BA2423F6D800F83401 /* learn_obj_c_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6B92423F6D800F83401 /* learn_obj_c_iosTests.m */; };
 		CB92C6C52423F6D900F83401 /* learn_obj_c_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */; };
+		CBFC88E424436D02001E5785 /* myCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFC88E324436D02001E5785 /* myCustomViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB023E5C24425E6700E55344 /* myCustomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCustomTableViewController.h; sourceTree = "<group>"; };
-		CB023E5D24425E6700E55344 /* myCustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCustomTableViewController.m; sourceTree = "<group>"; };
-		CB81BB6A244268A0001D9E5E /* myCustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCustomTableViewCell.h; sourceTree = "<group>"; };
-		CB81BB6B244268A0001D9E5E /* myCustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCustomTableViewCell.m; sourceTree = "<group>"; };
-		CB81BB72244276E2001D9E5E /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
-		CB81BB73244276E2001D9E5E /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
-		CB81BB74244276E2001D9E5E /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		CB2003BC24436603003D92A0 /* myCustomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCustomTableViewController.h; sourceTree = "<group>"; };
+		CB2003BD24436603003D92A0 /* myCustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCustomTableViewController.m; sourceTree = "<group>"; };
+		CB2003C1244366C2003D92A0 /* Kisi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kisi.h; sourceTree = "<group>"; };
+		CB2003C2244366C2003D92A0 /* Kisi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kisi.m; sourceTree = "<group>"; };
 		CB92C69A2423F6D700F83401 /* learn-obj-c-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learn-obj-c-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C69D2423F6D700F83401 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB92C69E2423F6D700F83401 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +58,8 @@
 		CB92C6C02423F6D900F83401 /* learn-obj-c-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "learn-obj-c-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learn_obj_c_iosUITests.m; sourceTree = "<group>"; };
 		CB92C6C62423F6D900F83401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBFC88E224436D02001E5785 /* myCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCustomViewController.h; sourceTree = "<group>"; };
+		CBFC88E324436D02001E5785 /* myCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCustomViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,33 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB023E5F24425E6F00E55344 /* cutomTableView group */ = {
+		CB2003BF2443660D003D92A0 /* tableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CB023E5C24425E6700E55344 /* myCustomTableViewController.h */,
-				CB023E5D24425E6700E55344 /* myCustomTableViewController.m */,
+				CB2003BC24436603003D92A0 /* myCustomTableViewController.h */,
+				CB2003BD24436603003D92A0 /* myCustomTableViewController.m */,
+				CBFC88E224436D02001E5785 /* myCustomViewController.h */,
+				CBFC88E324436D02001E5785 /* myCustomViewController.m */,
 			);
-			path = "cutomTableView group";
+			path = tableViewController;
 			sourceTree = "<group>";
 		};
-		CB81BB69244264C4001D9E5E /* customTableViewCell */ = {
+		CB2003C024436694003D92A0 /* customClassess */ = {
 			isa = PBXGroup;
 			children = (
-				CB81BB6A244268A0001D9E5E /* myCustomTableViewCell.h */,
-				CB81BB6B244268A0001D9E5E /* myCustomTableViewCell.m */,
+				CB2003C1244366C2003D92A0 /* Kisi.h */,
+				CB2003C2244366C2003D92A0 /* Kisi.m */,
 			);
-			path = customTableViewCell;
-			sourceTree = "<group>";
-		};
-		CB81BB71244276E2001D9E5E /* renkler */ = {
-			isa = PBXGroup;
-			children = (
-				CB81BB72244276E2001D9E5E /* yellow.png */,
-				CB81BB73244276E2001D9E5E /* blue.png */,
-				CB81BB74244276E2001D9E5E /* red.png */,
-			);
-			name = renkler;
-			path = ../../../../Desktop/renkler;
+			path = customClassess;
 			sourceTree = "<group>";
 		};
 		CB92C6912423F6D700F83401 = {
@@ -142,12 +130,11 @@
 		CB92C69C2423F6D700F83401 /* learn-obj-c-ios */ = {
 			isa = PBXGroup;
 			children = (
-				CB81BB71244276E2001D9E5E /* renkler */,
 				CB92C6A62423F6D700F83401 /* Main.storyboard */,
-				CB81BB69244264C4001D9E5E /* customTableViewCell */,
-				CB023E5F24425E6F00E55344 /* cutomTableView group */,
-				CB92C69D2423F6D700F83401 /* AppDelegate.h */,
+				CB2003BF2443660D003D92A0 /* tableViewController */,
+				CB2003C024436694003D92A0 /* customClassess */,
 				CB92C69E2423F6D700F83401 /* AppDelegate.m */,
+				CB92C69D2423F6D700F83401 /* AppDelegate.h */,
 				CB92C6A02423F6D700F83401 /* SceneDelegate.h */,
 				CB92C6A12423F6D700F83401 /* SceneDelegate.m */,
 				CB92C6A92423F6D800F83401 /* Assets.xcassets */,
@@ -280,9 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB92C6AD2423F6D800F83401 /* LaunchScreen.storyboard in Resources */,
-				CB81BB76244276E2001D9E5E /* blue.png in Resources */,
-				CB81BB75244276E2001D9E5E /* yellow.png in Resources */,
-				CB81BB77244276E2001D9E5E /* red.png in Resources */,
 				CB92C6AA2423F6D800F83401 /* Assets.xcassets in Resources */,
 				CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */,
 			);
@@ -309,9 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB023E5E24425E6700E55344 /* myCustomTableViewController.m in Sources */,
-				CB81BB6C244268A0001D9E5E /* myCustomTableViewCell.m in Sources */,
+				CB2003C3244366C2003D92A0 /* Kisi.m in Sources */,
+				CB2003BE24436603003D92A0 /* myCustomTableViewController.m in Sources */,
 				CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */,
+				CBFC88E424436D02001E5785 /* myCustomViewController.m in Sources */,
 				CB92C6B02423F6D800F83401 /* main.m in Sources */,
 				CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */,
 			);

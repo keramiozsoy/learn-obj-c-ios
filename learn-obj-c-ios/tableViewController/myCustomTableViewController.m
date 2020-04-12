@@ -2,7 +2,7 @@
 //  myCustomTableViewController.m
 //  learn-obj-c-ios
 //
-//  Created by Mac on 11.04.2020.
+//  Created by Mac on 12.04.2020.
 //  Copyright © 2020 Mac. All rights reserved.
 //
 
@@ -14,24 +14,28 @@
 
 @implementation myCustomTableViewController
 @synthesize dizi;
-@synthesize dizi2;
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dizi = @[@"bir",@"iki",@"uc"];
-    dizi2 = @[@"yellow.png",@"blue.png",@"red.png"];
+    Kisi *k1 = [[Kisi alloc] init];
+    k1.adi = @"isim1";
+    k1.yasi = 1111;
+    
+    Kisi *k2 = [[Kisi alloc] init];
+    k2.adi = @"isim2";
+    k2.yasi = 102;
+    
+    Kisi *k3 = [[Kisi alloc] init];
+    k3.adi = @"isim3";
+    k3.yasi = 103;
+    
+    
+    dizi = [NSMutableArray arrayWithObjects:k1,k2,k3, nil];
     
     
     
-    //for (int i=0; i<30; i++) {
-        
-    //    NSString *str = [[NSString alloc] initWithFormat:@"%d",i];
-        
-    //    [dizi addObject:str];
-        
-    //}
+    
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -55,51 +59,21 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    NSString *reuseIdentifier = @"myCustomCell";
-    // burada yazdigimizi ui dan
-    // myCustomCell yazarak esitliyoruz.
-    //
-    // eski
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-    //
-    //
-    // yeni
-    //
-    //
-    // #import "myCustomTableViewCell.h"
-    // bu sininfin header sinifinda
-    // import edilmistir
-    myCustomTableViewCell *myCustomCell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // UITableViewCell tan tureyen bir sınıftan donus
-    // yapılması gerektigi metotun donus parametresinden
-    // anlasiliyor
-
+    // myCustomRuseIdentifier ui tarafından
+    // cell in ismini de aynı deger verdik
+    static NSString *myCustomRuseIdentifier = @"myCustomRuseIdentifier";
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myCustomRuseIdentifier forIndexPath:indexPath];
     
-
-    // dizinin o satirindaki
-    // objeyi ui daki cell in text alanina
-    // deger olarak ver
-    //
-    // eski yontem
-    // cell.textLabel.text = [dizi objectAtIndex:indexPath.row];
-    //  return cell;
-    //
-    //
-    // yeni yontem
-    // dogru fakat calismiyor :) sdk eski oldugundan
-    //
-    //myCustomCell.myCustomLabelOutlet.text = [dizi objectAtIndex:indexPath.row];
-    //myCustomCell.myCustomImageViewOutlet.image  = [UIImage imageNamed: [dizi2 objectAtIndex:indexPath.row ]];
-    // otomatik olusturulan yonetim kullaniliyoruz
-    myCustomCell.textLabel.text = [dizi objectAtIndex:indexPath.row];
-    myCustomCell.imageView.image  = [UIImage imageNamed: [dizi2 objectAtIndex:indexPath.row ]];
+    Kisi *kTemp = [dizi objectAtIndex:indexPath.row];
     
+    cell.textLabel.text = kTemp.adi;
+    // cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",kTemp.yasi];
     
-    return myCustomCell;
+    return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -135,14 +109,24 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    myCustomViewController *mvc = [segue destinationViewController];
+    
+    //self.tableView customTableViewContoller dir.
+    // listeden secilen index bulunur.
+    NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+    
+    [mvc setGonderilenKisi:[dizi objectAtIndex:index.row]];
+    
 }
-*/
+
+
 
 @end

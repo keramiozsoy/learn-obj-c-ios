@@ -40,4 +40,4 @@ lesson 18 - UITableViewCell - Custom View with imageview and label and filled wi
 
 lesson 19 - segue - UITableViewController with Navigation Controller - fill array to list
 
-lesson 20 - NSNotificationCenter and Observer Method - NSMutableDictionary - add new item in add view and redirect root view automatically
+lesson 20 - NSNotificationCenter and Observer Method - NSMutableDictionary - add new item to list in different view and redirect root view automatically

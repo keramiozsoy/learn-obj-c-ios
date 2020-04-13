@@ -34,8 +34,13 @@
     dizi = [NSMutableArray arrayWithObjects:k1,k2,k3, nil];
     
     
+    self.title = @" Liste Sayfasinin Basligi";
+    self.navigationItem.rightBarButtonItem.title = @"Yeni Ekle";
     
     
+    // Bu sayfaya yeni kisi eklenme sayfasindan gelinirse
+    // dinleyici bir metota otomatik yonlendir.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(yeniEklenenleriDinleyenMetot:) name:@"notifyGonderilenYeniKisi" object:nil];
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -43,6 +48,26 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+
+
+- (void) yeniEklenenleriDinleyenMetot:(NSNotification * ) bildirim {
+    
+    if([bildirim.name isEqualToString:@"notifyGonderilenYeniKisi"]){
+
+        NSDictionary *dic = bildirim.userInfo;
+        
+        Kisi *yeniEklenen = [dic objectForKey:@"olusanYeniKisi"];
+        
+        [dizi addObject:yeniEklenen];
+        [self.tableView reloadData];
+
+        
+    }
+    
+    
+    
 }
 
 #pragma mark - Table view data source
@@ -116,6 +141,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"segueForDetail"]){
+           
     
     myCustomViewController *mvc = [segue destinationViewController];
     
@@ -124,7 +151,12 @@
     NSIndexPath *index = [self.tableView indexPathForSelectedRow];
     
     [mvc setGonderilenKisi:[dizi objectAtIndex:index.row]];
-    
+        
+    }else if([segue.identifier isEqualToString:@"segueForAdd"]){
+        NSLog(@" Segue - Ekleme sayfasina gitti");
+    }else{
+        NSLog(@" Tanimli segue yok");
+    }
 }
 
 

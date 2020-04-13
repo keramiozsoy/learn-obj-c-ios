@@ -22,10 +22,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSLog(@" %@ ",gonderilenKisi.adi);
+    NSLog(@" %@ - %d ",gonderilenKisi.adi, gonderilenKisi.yasi );
     
-    [labelOutlet setText:gonderilenKisi.adi];
+    NSString *str = [NSString stringWithFormat:@" %@ - %d ",gonderilenKisi.adi,gonderilenKisi.yasi] ;
+     
+    [labelOutlet setText:str];
     
+    
+    self.title = @" Detay Sayfasinin Basligi ";
 }
 
 /*

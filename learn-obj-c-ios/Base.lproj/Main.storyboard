@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="z1M-hh-DcD" kind="push" trigger="accessoryAction" id="ntT-Wi-w2C"/>
+                                    <segue destination="z1M-hh-DcD" kind="push" identifier="segueForDetail" trigger="accessoryAction" id="ntT-Wi-w2C"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -33,11 +33,59 @@
                             <outlet property="delegate" destination="V83-FT-e8O" id="xwI-yX-s4S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="c3P-aX-oNf"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="c3P-aX-oNf">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="CsS-g0-P7K">
+                            <connections>
+                                <segue destination="jEt-HP-2ZP" kind="push" identifier="segueForAdd" id="suk-Ab-cut"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRM-pN-ZnC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="274"/>
+            <point key="canvasLocation" x="228" y="203"/>
+        </scene>
+        <!--My Custom Add View Controller-->
+        <scene sceneID="YKn-On-cC0">
+            <objects>
+                <viewController id="jEt-HP-2ZP" customClass="myCustomAddViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rkz-dZ-4HU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pTk-kW-bUW">
+                                <rect key="frame" x="98" y="245" width="232" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="muS-9C-IOA">
+                                <rect key="frame" x="98" y="318" width="232" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJq-qt-d0R">
+                                <rect key="frame" x="98" y="433" width="232" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction_TouchUpInside:" destination="jEt-HP-2ZP" eventType="touchUpInside" id="RgL-vV-fav"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Urb-Pf-2Hg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gza-bh-Dd2"/>
+                    <connections>
+                        <outlet property="textfieldOutlet_kisiAdi" destination="pTk-kW-bUW" id="mTs-Gz-CrJ"/>
+                        <outlet property="textfieldOutlet_kisiYasi" destination="muS-9C-IOA" id="WbD-E6-PLI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9p4-uS-6dW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262.3188405797102" y="547.76785714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BSa-8k-jgb">
@@ -81,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWi-8s-IXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10.144927536231885" y="965.625"/>
+            <point key="canvasLocation" x="228" y="983"/>
         </scene>
     </scenes>
 </document>

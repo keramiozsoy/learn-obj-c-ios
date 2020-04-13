@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB2003BE24436603003D92A0 /* myCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2003BD24436603003D92A0 /* myCustomTableViewController.m */; };
 		CB2003C3244366C2003D92A0 /* Kisi.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2003C2244366C2003D92A0 /* Kisi.m */; };
+		CB5F6FFB2444DDB000A375D2 /* myCustomAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5F6FFA2444DDB000A375D2 /* myCustomAddViewController.m */; };
 		CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C69E2423F6D700F83401 /* AppDelegate.m */; };
 		CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6A12423F6D700F83401 /* SceneDelegate.m */; };
 		CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92C6A62423F6D700F83401 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 		CB2003BD24436603003D92A0 /* myCustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCustomTableViewController.m; sourceTree = "<group>"; };
 		CB2003C1244366C2003D92A0 /* Kisi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kisi.h; sourceTree = "<group>"; };
 		CB2003C2244366C2003D92A0 /* Kisi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kisi.m; sourceTree = "<group>"; };
+		CB5F6FF92444DDB000A375D2 /* myCustomAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCustomAddViewController.h; sourceTree = "<group>"; };
+		CB5F6FFA2444DDB000A375D2 /* myCustomAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCustomAddViewController.m; sourceTree = "<group>"; };
 		CB92C69A2423F6D700F83401 /* learn-obj-c-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learn-obj-c-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C69D2423F6D700F83401 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB92C69E2423F6D700F83401 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				CB2003BD24436603003D92A0 /* myCustomTableViewController.m */,
 				CBFC88E224436D02001E5785 /* myCustomViewController.h */,
 				CBFC88E324436D02001E5785 /* myCustomViewController.m */,
+				CB5F6FF92444DDB000A375D2 /* myCustomAddViewController.h */,
+				CB5F6FFA2444DDB000A375D2 /* myCustomAddViewController.m */,
 			);
 			path = tableViewController;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			files = (
 				CB2003C3244366C2003D92A0 /* Kisi.m in Sources */,
 				CB2003BE24436603003D92A0 /* myCustomTableViewController.m in Sources */,
+				CB5F6FFB2444DDB000A375D2 /* myCustomAddViewController.m in Sources */,
 				CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */,
 				CBFC88E424436D02001E5785 /* myCustomViewController.m in Sources */,
 				CB92C6B02423F6D800F83401 /* main.m in Sources */,

@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB2003BE24436603003D92A0 /* myCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2003BD24436603003D92A0 /* myCustomTableViewController.m */; };
-		CB2003C3244366C2003D92A0 /* Kisi.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2003C2244366C2003D92A0 /* Kisi.m */; };
-		CB5F6FFB2444DDB000A375D2 /* myCustomAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5F6FFA2444DDB000A375D2 /* myCustomAddViewController.m */; };
 		CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C69E2423F6D700F83401 /* AppDelegate.m */; };
 		CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6A12423F6D700F83401 /* SceneDelegate.m */; };
 		CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92C6A62423F6D700F83401 /* Main.storyboard */; };
@@ -18,7 +15,9 @@
 		CB92C6B02423F6D800F83401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6AF2423F6D800F83401 /* main.m */; };
 		CB92C6BA2423F6D800F83401 /* learn_obj_c_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6B92423F6D800F83401 /* learn_obj_c_iosTests.m */; };
 		CB92C6C52423F6D900F83401 /* learn_obj_c_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */; };
-		CBFC88E424436D02001E5785 /* myCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFC88E324436D02001E5785 /* myCustomViewController.m */; };
+		CBF8A4C8244762B100EE05C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF8A4C7244762B100EE05C7 /* ViewController.m */; };
+		CBF8A4CA2447634600EE05C7 /* deneme.txt in Resources */ = {isa = PBXBuildFile; fileRef = CBF8A4C92447634600EE05C7 /* deneme.txt */; };
+		CBF8A4CD244764EC00EE05C7 /* DosyaOku.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF8A4CC244764EC00EE05C7 /* DosyaOku.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB2003BC24436603003D92A0 /* myCustomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCustomTableViewController.h; sourceTree = "<group>"; };
-		CB2003BD24436603003D92A0 /* myCustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCustomTableViewController.m; sourceTree = "<group>"; };
-		CB2003C1244366C2003D92A0 /* Kisi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kisi.h; sourceTree = "<group>"; };
-		CB2003C2244366C2003D92A0 /* Kisi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kisi.m; sourceTree = "<group>"; };
-		CB5F6FF92444DDB000A375D2 /* myCustomAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCustomAddViewController.h; sourceTree = "<group>"; };
-		CB5F6FFA2444DDB000A375D2 /* myCustomAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCustomAddViewController.m; sourceTree = "<group>"; };
 		CB92C69A2423F6D700F83401 /* learn-obj-c-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learn-obj-c-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C69D2423F6D700F83401 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB92C69E2423F6D700F83401 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,8 +54,11 @@
 		CB92C6C02423F6D900F83401 /* learn-obj-c-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "learn-obj-c-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learn_obj_c_iosUITests.m; sourceTree = "<group>"; };
 		CB92C6C62423F6D900F83401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBFC88E224436D02001E5785 /* myCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myCustomViewController.h; sourceTree = "<group>"; };
-		CBFC88E324436D02001E5785 /* myCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myCustomViewController.m; sourceTree = "<group>"; };
+		CBF8A4C6244762B100EE05C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CBF8A4C7244762B100EE05C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CBF8A4C92447634600EE05C7 /* deneme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deneme.txt; sourceTree = "<group>"; };
+		CBF8A4CB244764EC00EE05C7 /* DosyaOku.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DosyaOku.h; sourceTree = "<group>"; };
+		CBF8A4CC244764EC00EE05C7 /* DosyaOku.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DosyaOku.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,28 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB2003BF2443660D003D92A0 /* tableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CB2003BC24436603003D92A0 /* myCustomTableViewController.h */,
-				CB2003BD24436603003D92A0 /* myCustomTableViewController.m */,
-				CBFC88E224436D02001E5785 /* myCustomViewController.h */,
-				CBFC88E324436D02001E5785 /* myCustomViewController.m */,
-				CB5F6FF92444DDB000A375D2 /* myCustomAddViewController.h */,
-				CB5F6FFA2444DDB000A375D2 /* myCustomAddViewController.m */,
-			);
-			path = tableViewController;
-			sourceTree = "<group>";
-		};
-		CB2003C024436694003D92A0 /* customClassess */ = {
-			isa = PBXGroup;
-			children = (
-				CB2003C1244366C2003D92A0 /* Kisi.h */,
-				CB2003C2244366C2003D92A0 /* Kisi.m */,
-			);
-			path = customClassess;
-			sourceTree = "<group>";
-		};
 		CB92C6912423F6D700F83401 = {
 			isa = PBXGroup;
 			children = (
@@ -135,9 +109,12 @@
 		CB92C69C2423F6D700F83401 /* learn-obj-c-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CBF8A4CB244764EC00EE05C7 /* DosyaOku.h */,
+				CBF8A4CC244764EC00EE05C7 /* DosyaOku.m */,
+				CBF8A4C92447634600EE05C7 /* deneme.txt */,
 				CB92C6A62423F6D700F83401 /* Main.storyboard */,
-				CB2003BF2443660D003D92A0 /* tableViewController */,
-				CB2003C024436694003D92A0 /* customClassess */,
+				CBF8A4C6244762B100EE05C7 /* ViewController.h */,
+				CBF8A4C7244762B100EE05C7 /* ViewController.m */,
 				CB92C69E2423F6D700F83401 /* AppDelegate.m */,
 				CB92C69D2423F6D700F83401 /* AppDelegate.h */,
 				CB92C6A02423F6D700F83401 /* SceneDelegate.h */,
@@ -273,6 +250,7 @@
 			files = (
 				CB92C6AD2423F6D800F83401 /* LaunchScreen.storyboard in Resources */,
 				CB92C6AA2423F6D800F83401 /* Assets.xcassets in Resources */,
+				CBF8A4CA2447634600EE05C7 /* deneme.txt in Resources */,
 				CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,12 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2003C3244366C2003D92A0 /* Kisi.m in Sources */,
-				CB2003BE24436603003D92A0 /* myCustomTableViewController.m in Sources */,
-				CB5F6FFB2444DDB000A375D2 /* myCustomAddViewController.m in Sources */,
 				CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */,
-				CBFC88E424436D02001E5785 /* myCustomViewController.m in Sources */,
 				CB92C6B02423F6D800F83401 /* main.m in Sources */,
+				CBF8A4CD244764EC00EE05C7 /* DosyaOku.m in Sources */,
+				CBF8A4C8244762B100EE05C7 /* ViewController.m in Sources */,
 				CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

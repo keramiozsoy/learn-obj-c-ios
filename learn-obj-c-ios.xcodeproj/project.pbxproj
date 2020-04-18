@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB668A58244B59E300D5020F /* deneme.json in Resources */ = {isa = PBXBuildFile; fileRef = CB668A57244B59E300D5020F /* deneme.json */; };
+		CB50F9DF244BAB1C00B219A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50F9DE244BAB1C00B219A6 /* ViewController.m */; };
+		CB50F9FD244BAD4600B219A6 /* EGODatabaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50F9F5244BAD4500B219A6 /* EGODatabaseRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CB50F9FE244BAD4600B219A6 /* EGODatabaseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50F9F6244BAD4500B219A6 /* EGODatabaseResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CB50F9FF244BAD4600B219A6 /* EGODatabaseRow.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50F9F8244BAD4500B219A6 /* EGODatabaseRow.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CB50FA00244BAD4600B219A6 /* EGODatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CB50F9FC244BAD4600B219A6 /* EGODatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CB50FA03244BAEEF00B219A6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB50FA02244BAEEF00B219A6 /* libsqlite3.tbd */; };
 		CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C69E2423F6D700F83401 /* AppDelegate.m */; };
 		CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6A12423F6D700F83401 /* SceneDelegate.m */; };
 		CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92C6A62423F6D700F83401 /* Main.storyboard */; };
@@ -16,9 +21,6 @@
 		CB92C6B02423F6D800F83401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6AF2423F6D800F83401 /* main.m */; };
 		CB92C6BA2423F6D800F83401 /* learn_obj_c_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6B92423F6D800F83401 /* learn_obj_c_iosTests.m */; };
 		CB92C6C52423F6D900F83401 /* learn_obj_c_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */; };
-		CBF8A4C8244762B100EE05C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF8A4C7244762B100EE05C7 /* ViewController.m */; };
-		CBF8A4CA2447634600EE05C7 /* deneme.txt in Resources */ = {isa = PBXBuildFile; fileRef = CBF8A4C92447634600EE05C7 /* deneme.txt */; };
-		CBF8A4CD244764EC00EE05C7 /* DosyaOku.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF8A4CC244764EC00EE05C7 /* DosyaOku.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB668A57244B59E300D5020F /* deneme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = deneme.json; sourceTree = "<group>"; };
+		CB50F9DD244BAB1C00B219A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CB50F9DE244BAB1C00B219A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CB50F9F3244BAD4500B219A6 /* EGODatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGODatabase.h; sourceTree = "<group>"; };
+		CB50F9F4244BAD4500B219A6 /* EGODatabaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGODatabaseRequest.h; sourceTree = "<group>"; };
+		CB50F9F5244BAD4500B219A6 /* EGODatabaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGODatabaseRequest.m; sourceTree = "<group>"; };
+		CB50F9F6244BAD4500B219A6 /* EGODatabaseResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGODatabaseResult.m; sourceTree = "<group>"; };
+		CB50F9F7244BAD4500B219A6 /* EGODatabaseRow_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGODatabaseRow_Internal.h; sourceTree = "<group>"; };
+		CB50F9F8244BAD4500B219A6 /* EGODatabaseRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGODatabaseRow.m; sourceTree = "<group>"; };
+		CB50F9F9244BAD4500B219A6 /* EGODatabaseResult_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGODatabaseResult_Internal.h; sourceTree = "<group>"; };
+		CB50F9FA244BAD4500B219A6 /* EGODatabaseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGODatabaseResult.h; sourceTree = "<group>"; };
+		CB50F9FB244BAD4500B219A6 /* EGODatabaseRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGODatabaseRow.h; sourceTree = "<group>"; };
+		CB50F9FC244BAD4600B219A6 /* EGODatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGODatabase.m; sourceTree = "<group>"; };
+		CB50FA02244BAEEF00B219A6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CB92C69A2423F6D700F83401 /* learn-obj-c-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learn-obj-c-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C69D2423F6D700F83401 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB92C69E2423F6D700F83401 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,11 +70,6 @@
 		CB92C6C02423F6D900F83401 /* learn-obj-c-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "learn-obj-c-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C6C42423F6D900F83401 /* learn_obj_c_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learn_obj_c_iosUITests.m; sourceTree = "<group>"; };
 		CB92C6C62423F6D900F83401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBF8A4C6244762B100EE05C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CBF8A4C7244762B100EE05C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CBF8A4C92447634600EE05C7 /* deneme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deneme.txt; sourceTree = "<group>"; };
-		CBF8A4CB244764EC00EE05C7 /* DosyaOku.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DosyaOku.h; sourceTree = "<group>"; };
-		CBF8A4CC244764EC00EE05C7 /* DosyaOku.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DosyaOku.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB50FA03244BAEEF00B219A6 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +98,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB50F9E0244BAC0400B219A6 /* Ego Database */ = {
+			isa = PBXGroup;
+			children = (
+				CB50F9F3244BAD4500B219A6 /* EGODatabase.h */,
+				CB50F9FC244BAD4600B219A6 /* EGODatabase.m */,
+				CB50F9F4244BAD4500B219A6 /* EGODatabaseRequest.h */,
+				CB50F9F5244BAD4500B219A6 /* EGODatabaseRequest.m */,
+				CB50F9F9244BAD4500B219A6 /* EGODatabaseResult_Internal.h */,
+				CB50F9FA244BAD4500B219A6 /* EGODatabaseResult.h */,
+				CB50F9F6244BAD4500B219A6 /* EGODatabaseResult.m */,
+				CB50F9F7244BAD4500B219A6 /* EGODatabaseRow_Internal.h */,
+				CB50F9FB244BAD4500B219A6 /* EGODatabaseRow.h */,
+				CB50F9F8244BAD4500B219A6 /* EGODatabaseRow.m */,
+			);
+			path = "Ego Database";
+			sourceTree = "<group>";
+		};
+		CB50FA01244BAEEF00B219A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB50FA02244BAEEF00B219A6 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB92C6912423F6D700F83401 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +130,7 @@
 				CB92C6B82423F6D800F83401 /* learn-obj-c-iosTests */,
 				CB92C6C32423F6D900F83401 /* learn-obj-c-iosUITests */,
 				CB92C69B2423F6D700F83401 /* Products */,
+				CB50FA01244BAEEF00B219A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,13 +147,10 @@
 		CB92C69C2423F6D700F83401 /* learn-obj-c-ios */ = {
 			isa = PBXGroup;
 			children = (
-				CB668A57244B59E300D5020F /* deneme.json */,
-				CBF8A4CB244764EC00EE05C7 /* DosyaOku.h */,
-				CBF8A4CC244764EC00EE05C7 /* DosyaOku.m */,
-				CBF8A4C92447634600EE05C7 /* deneme.txt */,
+				CB50F9E0244BAC0400B219A6 /* Ego Database */,
 				CB92C6A62423F6D700F83401 /* Main.storyboard */,
-				CBF8A4C6244762B100EE05C7 /* ViewController.h */,
-				CBF8A4C7244762B100EE05C7 /* ViewController.m */,
+				CB50F9DD244BAB1C00B219A6 /* ViewController.h */,
+				CB50F9DE244BAB1C00B219A6 /* ViewController.m */,
 				CB92C69E2423F6D700F83401 /* AppDelegate.m */,
 				CB92C69D2423F6D700F83401 /* AppDelegate.h */,
 				CB92C6A02423F6D700F83401 /* SceneDelegate.h */,
@@ -253,8 +286,6 @@
 			files = (
 				CB92C6AD2423F6D800F83401 /* LaunchScreen.storyboard in Resources */,
 				CB92C6AA2423F6D800F83401 /* Assets.xcassets in Resources */,
-				CB668A58244B59E300D5020F /* deneme.json in Resources */,
-				CBF8A4CA2447634600EE05C7 /* deneme.txt in Resources */,
 				CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,11 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB50FA00244BAD4600B219A6 /* EGODatabase.m in Sources */,
+				CB50F9FD244BAD4600B219A6 /* EGODatabaseRequest.m in Sources */,
 				CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */,
 				CB92C6B02423F6D800F83401 /* main.m in Sources */,
-				CBF8A4CD244764EC00EE05C7 /* DosyaOku.m in Sources */,
-				CBF8A4C8244762B100EE05C7 /* ViewController.m in Sources */,
+				CB50F9FF244BAD4600B219A6 /* EGODatabaseRow.m in Sources */,
+				CB50F9DF244BAB1C00B219A6 /* ViewController.m in Sources */,
 				CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */,
+				CB50F9FE244BAD4600B219A6 /* EGODatabaseResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

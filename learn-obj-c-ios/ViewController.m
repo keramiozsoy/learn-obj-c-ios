@@ -2,7 +2,7 @@
 //  ViewController.m
 //  learn-obj-c-ios
 //
-//  Created by Mac on 15.04.2020.
+//  Created by Mac on 19.04.2020.
 //  Copyright © 2020 Mac. All rights reserved.
 //
 
@@ -16,83 +16,87 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    
+    // egodatabase wrapper kutuphanesini kullandik
+    // proje dosyalarini kopyaliyoruz
+    //
+    // daha sonra
+    // xcode -> project explorer dan en ust katmandaki
+    // proje ismine tikliyoruz
+    //
+    // Build Phases sekmesine gidiyoruz.
+    // Link Binary with Libraries tikliyoruz
+    // + ya basip sqlite database ini library
+    // olarak ekliyoruz
+    //
+    // libsqlite3.tdb or libsqlite3.dylib
+    //
+    // dosya olarak ekledigimiz siniflar
+    // yardimiyla libsqlite3 a erisecegiz.
     
     
     
-    NSString *icerik = nil;
-    @try {
+    // ARC - automatic reference counting
+    //
+    // Her olusturdugunuz objeyi
+    // isiniz bittikten sonra
+    // baginizi koparmak zorundaydiniz.
+    // ram islemlerini manuel olarak
+    // bu sekilde yonetmek zorundaydiniz.
+    // ama artık Xcode derleyicisi
+    // bunu kendi yapiyor.
+    
+    // Peki ARC destekli bir component
+    // kullanmiyorsak ne olacak.
+    
+    // egodatabase arc destekli degildir
+    //
+    // xcode -> project explorer
+    // Build Phases sekmesine gidiyoruz.
+    // compile source
+    // egodatabase dosyalarinia compiler flag
+    //
+    // -fno-objc-arc
+    //
+    // yazisini ekliyoruz.
+    //
+    
+    
+    
 
-        icerik =  [DosyaOku okuWithResource:@"deneme" andType:@"json"];
-        
-        NSLog(@" %@ ",  icerik);
-        
-        NSLog(@" Yukaridaki yazim sekli enconding problemi olusturur ");
-        
-    } @catch (NSException *exception) {
-        NSLog(@" icerik bulunamadi");
+    NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *docsDir = dirPaths[0];
+    NSLog(@" path : %@ ", docsDir);
+    
+    NSMutableString *filePath = [[NSMutableString alloc] initWithString:docsDir];
+    [filePath appendString:@"/"];
+    [filePath appendString:@"database"];
+    [filePath appendString:@".sqlite3"];
+    
+    NSLog(@" file path : %@ ", filePath );
+    
+    // DB olustur
+    EGODatabase *db = [EGODatabase databaseWithPath:filePath];
+    
+    if ([db open]){
+        NSLog(@"DB olusturulmustur.");
     }
     
-    NSData *data = [icerik dataUsingEncoding:NSUTF8StringEncoding];
     
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
-    
-    // kNilOptions - json icinde hic bosluk kalmasin
-    
-    NSLog(@" dic %@ ",dic);
-    
-    NSArray *kisiler = [dic objectForKey:@"kisiler"];
-    
-    NSLog(@" kisiler %@ ", kisiler);
-    
-    NSDictionary *dic00 = [kisiler objectAtIndex:0];
-    
-    NSLog(@" dic00 %@ ", dic00);
-    
-    NSDictionary *dic01 = [kisiler objectAtIndex:1];
-    
-    NSLog(@" dic01 %@ ", dic01);
-    
-    NSString *dic00Ad = [dic00 objectForKey:@"ad"];
-    NSNumber *dic00Yas = [dic00 objectForKey:@"yas"];
-    
-    NSLog(@" dic00Ad %@ ", dic00Ad);
-    NSLog(@" dic00Yas %@ ", dic00Yas);
-    
-    NSString *dic01Ad = [dic01 objectForKey:@"ad"];
-    NSNumber *dic01Yas = [dic01 objectForKey:@"yas"];
-    
-    NSLog(@" dic01Ad %@ ", dic01Ad);
-    NSLog(@" dic01Yas %@ ", dic01Yas);
-    
-    // yukarisi json to object
-    // asagisi object to json
-    
-    NSMutableDictionary *dicJson = [NSMutableDictionary dictionary];
-    
-    NSMutableDictionary *dicKisiJson = [NSMutableDictionary dictionary];
-    
-    NSString *adJson = @"CCC";
-    NSNumber *yasJson = [NSNumber numberWithInteger:33];
-    
-    [dicKisiJson setObject:adJson forKey:@"ad"];
-    [dicKisiJson setObject:yasJson forKey:@"yas"];
-
-    [dicJson setObject:dicKisiJson forKey:@"kisi"];
-    
-    NSData *prepareData = [NSJSONSerialization dataWithJSONObject:dicJson options:NSJSONWritingPrettyPrinted error:NULL];
-    
-    NSString *prepareStr = [[NSString alloc] initWithData:prepareData encoding:NSUTF8StringEncoding];
+    EGODatabaseResult *result = [ db executeQuery:@"CREATE TABLE IF NOT EXISTS KISI ('ID' INTEGER PRIMARY KEY  NOT NULL  UNIQUE , 'ISIM' VARCHAR(50), 'YAS' INTEGER, 'DOGUMTARIHI' INTEGER) " ];
     
     
-    NSLog(@" prepared : %@   ", prepareStr);
+    result = [db executeQuery:@" SELECT * FROM KISI "];
+    
+    result = [db executeQuery:@" INSERT INTO KISI (ISIM,YAS) VALUES ( 'Ali', 50 ) "];
     
     
-    
-    
-    
-    
-    
-    
+    for( EGODatabaseRow *row in result ) { // fast enumaration
+        NSLog(@" isim : %@, yas : %d ", [row stringForColumn:@"ISIM"], [row intForColumn:@"YAS"]);
+    }
     
     
     

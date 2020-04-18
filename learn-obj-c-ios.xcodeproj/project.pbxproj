@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB668A58244B59E300D5020F /* deneme.json in Resources */ = {isa = PBXBuildFile; fileRef = CB668A57244B59E300D5020F /* deneme.json */; };
 		CB92C69F2423F6D700F83401 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C69E2423F6D700F83401 /* AppDelegate.m */; };
 		CB92C6A22423F6D700F83401 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB92C6A12423F6D700F83401 /* SceneDelegate.m */; };
 		CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92C6A62423F6D700F83401 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB668A57244B59E300D5020F /* deneme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = deneme.json; sourceTree = "<group>"; };
 		CB92C69A2423F6D700F83401 /* learn-obj-c-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learn-obj-c-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92C69D2423F6D700F83401 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB92C69E2423F6D700F83401 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		CB92C69C2423F6D700F83401 /* learn-obj-c-ios */ = {
 			isa = PBXGroup;
 			children = (
+				CB668A57244B59E300D5020F /* deneme.json */,
 				CBF8A4CB244764EC00EE05C7 /* DosyaOku.h */,
 				CBF8A4CC244764EC00EE05C7 /* DosyaOku.m */,
 				CBF8A4C92447634600EE05C7 /* deneme.txt */,
@@ -250,6 +253,7 @@
 			files = (
 				CB92C6AD2423F6D800F83401 /* LaunchScreen.storyboard in Resources */,
 				CB92C6AA2423F6D800F83401 /* Assets.xcassets in Resources */,
+				CB668A58244B59E300D5020F /* deneme.json in Resources */,
 				CBF8A4CA2447634600EE05C7 /* deneme.txt in Resources */,
 				CB92C6A82423F6D700F83401 /* Main.storyboard in Resources */,
 			);

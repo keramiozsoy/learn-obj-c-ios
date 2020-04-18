@@ -18,47 +18,78 @@
     [super viewDidLoad];
     
     
-    // Bundle nedir ?
     
-    // .app uzantili
-    // projemizin derlenmis haline
-    // verilen isimdir.
-    
-    // Dosya okuma surekli yapıyorsaniz
-    //
-    // NSCachesDirectory konusu
-    //
-    // incelenemelidir.
-    
-    // Tüm dosyalara erismek icin
-    // asagida bir metot daha yazdik
-    
-    // app icindeki bir dosya okuma yapalim
-    
+    NSString *icerik = nil;
     @try {
+
+        icerik =  [DosyaOku okuWithResource:@"deneme" andType:@"json"];
         
-        // var olmayan dosyayi okuyalim
-        //
-        // NSString *icerik =  [DosyaOku okuWithResource:@"deneme1" andType:@"txt"];
+        NSLog(@" %@ ",  icerik);
         
-        NSString *icerik =  [DosyaOku okuWithResource:@"deneme" andType:@"txt"];
-        
-        NSLog(@" %@ ", icerik);
+        NSLog(@" Yukaridaki yazim sekli enconding problemi olusturur ");
         
     } @catch (NSException *exception) {
         NSLog(@" icerik bulunamadi");
     }
     
+    NSData *data = [icerik dataUsingEncoding:NSUTF8StringEncoding];
     
-   
-    // Istenilen herhangi
-    // bir lokasyonda
-    // dosya olusturup yazip okumak
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
     
-    NSString *icerik2 = [DosyaOku telefondakiKlasordenOkuWithResource:@"yenidosya" andType:@".txt"];
-    NSLog(@" icerik2 :  %@ ", icerik2);
+    // kNilOptions - json icinde hic bosluk kalmasin
     
-   
+    NSLog(@" dic %@ ",dic);
+    
+    NSArray *kisiler = [dic objectForKey:@"kisiler"];
+    
+    NSLog(@" kisiler %@ ", kisiler);
+    
+    NSDictionary *dic00 = [kisiler objectAtIndex:0];
+    
+    NSLog(@" dic00 %@ ", dic00);
+    
+    NSDictionary *dic01 = [kisiler objectAtIndex:1];
+    
+    NSLog(@" dic01 %@ ", dic01);
+    
+    NSString *dic00Ad = [dic00 objectForKey:@"ad"];
+    NSNumber *dic00Yas = [dic00 objectForKey:@"yas"];
+    
+    NSLog(@" dic00Ad %@ ", dic00Ad);
+    NSLog(@" dic00Yas %@ ", dic00Yas);
+    
+    NSString *dic01Ad = [dic01 objectForKey:@"ad"];
+    NSNumber *dic01Yas = [dic01 objectForKey:@"yas"];
+    
+    NSLog(@" dic01Ad %@ ", dic01Ad);
+    NSLog(@" dic01Yas %@ ", dic01Yas);
+    
+    // yukarisi json to object
+    // asagisi object to json
+    
+    NSMutableDictionary *dicJson = [NSMutableDictionary dictionary];
+    
+    NSMutableDictionary *dicKisiJson = [NSMutableDictionary dictionary];
+    
+    NSString *adJson = @"CCC";
+    NSNumber *yasJson = [NSNumber numberWithInteger:33];
+    
+    [dicKisiJson setObject:adJson forKey:@"ad"];
+    [dicKisiJson setObject:yasJson forKey:@"yas"];
+
+    [dicJson setObject:dicKisiJson forKey:@"kisi"];
+    
+    NSData *prepareData = [NSJSONSerialization dataWithJSONObject:dicJson options:NSJSONWritingPrettyPrinted error:NULL];
+    
+    NSString *prepareStr = [[NSString alloc] initWithData:prepareData encoding:NSUTF8StringEncoding];
+    
+    
+    NSLog(@" prepared : %@   ", prepareStr);
+    
+    
+    
+    
+    
     
     
     

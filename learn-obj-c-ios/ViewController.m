@@ -29,7 +29,7 @@
     // sayfa acildiginda otomatik olarak secili
     //[textFieldOutlet becomeFirstResponder];
     
-    // password klavyesi
+    // password girişi gorunumu saglar
     //[textFieldOutlet setSecureTextEntry:YES];
     
     
